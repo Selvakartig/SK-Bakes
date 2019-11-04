@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>About Us</title>
+        <link rel="icon" type="image/png" href="../images/sk-logo.png">
+        <!-- For apple devices -->
+        <link rel="apple-touch-icon" type="image/png"
+            href="../images/sk-logo.png"
+            />
+        <link rel="stylesheet" href="../css/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Baumans'
+            rel='stylesheet'>
+    </head>
+    <body class="container">
+        <header class="pro-head-container">
+                <a href="../html/main.html"><img src="../images/SK Bakes logo.png"
+                        alt="logo" width="150px" height="80px"></a>
+                <h1 style="margin: auto auto;">Contact Us</h1>
+                <a href="../html/main.html"><img src="../images/SK Bakes logo.png"
+                        alt="logo" width="150px" height="80px"></a>
+            </header>
+        <main class="contact-container">
+                
+            <form id="front-form" action="#" method="post">
+                
+                <div class="form-item">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name">
+                </div>
+                <div class="form-item">
+                    <label for="cellnum">Mobile No</label>
+                    <input type="tel" id="cellnum" name="mobile"
+                        placeholder="Mobile No">
+                </div>
+                <div class="form-item">
+                    <label for="email">Email Id</label>
+                    <input type="email" name="email" id="email"
+                        placeholder="Email Id">
+                </div>
+                <div class="form-item">
+                    <label for="state">State</label>
+                    <select name="state" id="state">
+                        <optgroup label="State">
+                            <option disabled selected>-- Select State --</option>
+                            <option value="tamilnadu">Tamil nadu</option>
+                            <option value="kerala">Kerala</option>
+                            <option value="andra">Andra pradesh</option>
+                            <option value="karnataka">Karnataka</option>
+                            <option value="maharastra">Maharastra</option>
+                            <option value="telungana">Telungana</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="city">City</label>
+                    <input type="text" id="city" list="cities"
+                        placeholder="City">
+                </div>
+                <div class="form-item">
+                    <label for="comment">Comment</label>
+                    <textarea name="comment" id="comment" cols="23" rows="3"
+                        placeholder="Comment"></textarea>
+                </div>
+                <button id="front-btn" type="submit">Submit</button>
+            </form>
+            <datalist id="cities">
+                <option value="Tirupur"></option>
+                <option value="Coimbatore"></option>
+                <option value="Erode"></option>
+                <option value="Madurai"></option>
+                <option value="Chennai"></option>
+            </datalist>
+        </main>
+        <footer class="footer-container" style="  position: absolute;
+        bottom: 0;">
+                <h3>Contact&nbsp;:&nbsp;</h3>
+                <p>Mobile : 984xxxx123 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email :
+                    selvxxx@gmail.com</p>
+            </footer>
+    </body>
+</html>

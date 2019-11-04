@@ -1,0 +1,261 @@
+/*****************
+      Default 
+******************/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/***Login***/
+
+.front-container{
+  display: flex;
+  justify-content:flex-start; 
+  background-image:url("../images/login_background_desktop.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.front-item{
+  /* border: 1rem solid blue; */
+  height: 100vh;
+  width: 87.6vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+form#front-form{
+  padding: 1rem; 
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+}
+.form-item{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0.5rem;
+}
+.form-item>label{
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  flex-basis: 8rem;
+}
+button#front-btn{
+  margin: 0 10.3rem;
+  width: 5rem;
+  }
+
+/***Main***/
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+.head-container{
+  width: 90vw;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid black; */
+  
+}
+.nav-container{
+  width: 90vw;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+}
+.nav-item{
+  font-family: Baumans;
+  display: flex;
+}
+#uname-main{
+  margin-right: 10px;
+}
+.product, .contact{
+  /* border: 1px solid black; */
+  border-radius: 25px;
+  padding: 2px;
+  margin-left: 5rem;
+}
+a{
+  text-decoration: none;
+  color: #612413;
+  font-family: Baumans;
+} 
+.main-container{
+  width: 90vw;
+  padding: 5px;
+  margin: 5px;
+  /* border: 1px solid black; */
+}
+.main-item{
+  display: flex;
+  justify-content: center;
+  opacity: 0.4; 
+}
+.footer-container{
+  width: 90vw;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  font-family: Baumans;
+  color: #612413;
+  /* border: 1px solid black; */
+
+}
+
+/***products***/
+
+.pro-head-container{
+  width: 90vw;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid black; */
+  
+}
+
+.slide-item{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5x;
+}
+
+.cards{
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  /* padding: 10px 5px 0px 0px; */
+  background-color: bisque;
+}
+
+.cards-item{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 22.3vw;
+}
+
+.cards-item>p{
+  font-size: 20px;
+  align-self: center;
+}
+
+/***Contact***/
+
+.contact-container{
+  display: flex;
+  justify-content:flex-start; 
+  /* background-image:url("../images/login_background_desktop.jpg");
+  background-repeat:no-repeat;
+  background-size:cover; */
+}
+
+
+/************** 
+      Form 
+***************/
+
+ input,select,option,label,button,textarea{
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  color: inherit;
+  border-radius: 25px;
+  outline:none;
+}
+
+/******************
+    Media Query
+*******************/
+/*  
+@media (min-width:500px){
+  .form-item label{
+    display: block;
+    color: inherit;
+  }
+
+  .form-box select{
+    display: flex;
+  }
+}
+
+@media (min-width:600px){
+  .form-box{
+    flex-direction: row;
+  }
+
+  .form-box label{
+    flex-basis: 6rem;
+    color: inherit;
+  }
+
+  .form-box .btn1{
+    margin-left: 6rem;
+  }
+
+  .form-box select {
+    display: flex;
+    flex-basis: 10rem; 
+  }
+
+} */
+
+
+@media(max-width:420px)
+{
+  .form-item label{
+    display: none;
+  }
+  #uname-main{
+    margin-right: 5px;
+  }
+  .nav-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; 
+    font-size: 10pt;
+  }
+  .nav-item{
+    color: blue;
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: column;
+    align-items: center;
+  }
+  .home,.product,.contact{
+    border: 0.5px solid black;
+    border-radius: 0px;
+    padding: 0px;
+    background-color: aquamarine;
+    margin-left: 0px;    
+  }
+  .front-container{
+    display: flex;
+    justify-content:center; 
+    background-image:url("../images/login_background_mobile.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  .front-item{
+    height: 93vh;
+    width: 81vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  form#front-form{
+    background-color : #612413;
+    opacity: 0.7;
+  }
+}
