@@ -7,26 +7,65 @@
   box-sizing: border-box;
 }
 
-/***Login***/
+/***Index page***/
 
-.front-container{
+.index-container{
+  height: 100vh;
   display: flex;
   justify-content:flex-start; 
   background-image:url("../images/login_background_desktop.jpg");
   background-repeat:no-repeat;
   background-size:cover;
+  /* border: 3px solid red; */
+  align-items: center;
+  flex-direction: column;
 }
-.front-item{
-  /* border: 1rem solid blue; */
-  height: 100vh;
-  width: 87.6vw;
+
+.index-item{
+  /* border: 3px solid blue; */
+  /* height: 7vh; */
+  width: 80vw;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
+
+.index-btn{
+  margin-right: 1rem;
+  /* border: 1px solid black; */
+  background-color: burlywood;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+/***Login***/
+
+.front-container{
+  height: 100vh;
+  display: flex;
+  justify-content:center; 
+  background-image:url("../images/login_background_desktop.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  /* flex-direction: column; */
+  /* border: 3px solid red; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.front-item{
+  /* border: 3px solid blue; */
+  /* height: 30vh; */
+  width: 62vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* flex-direction: column; */
+}
 form#front-form{
   padding: 1rem; 
-  /* border: 1px solid black; */
+  /* border: 3px solid black; */
   display: flex;
   flex-direction: column;
 }
@@ -36,14 +75,15 @@ form#front-form{
   padding-bottom: 0.5rem;
 }
 .form-item>label{
-  color: black;
+  color: cornsilk;
   font-size: 1.5rem;
   display: flex;
   flex-basis: 8rem;
 }
-button#front-btn{
-  margin: 0 10.3rem;
-  width: 5rem;
+button.front-btn{
+  width: 4rem;
+  color: black;
+  margin: 0 auto;
   }
 
 /***Main***/
@@ -69,23 +109,66 @@ button#front-btn{
   margin: 5px;
   display: flex;
   justify-content: space-between;
+  /* flex-direction: row; */
   /* border: 1px solid black; */
 }
 .nav-item{
+  /* border: 1px solid black; */
   font-family: Baumans;
   display: flex;
+}
+.home:hover ,.product:hover,.contact:hover{
+  background-color: skyblue;
 }
 #uname-main{
   margin-right: 10px;
 }
+.home{
+  border-radius: 15px;
+  padding: 7px;
+}
 .product, .contact{
   /* border: 1px solid black; */
-  border-radius: 25px;
-  padding: 2px;
+  border-radius: 15px;
+  padding: 7px;
   margin-left: 5rem;
 }
-a{
+
+.nav-item ul li{
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+.nav-item ul li a{
+  display: block;
+  padding: 5px 15px;
+  /* color: #333;
+  text-decoration: none; */
+}
+
+.nav-item ul li ul a:hover{
+  color: #fff;
+  background: #939393;
+}
+
+.nav-item ul li ul.signout{
+  /* width: 50px; */
+  background: #f2f2f2;
+  display: none;
+  position: absolute;
+  z-index: 999;
+  /* right: 0; 
+  left :0; */
+}
+.nav-item ul li:hover ul.signout{
+  display: block;	/* Display the dropdown */
+}
+.nav-item ul li ul.signout li{
+  display: block;
+}
+a,ul{
   text-decoration: none;
+  list-style: none;
   color: #612413;
   font-family: Baumans;
 } 
@@ -93,7 +176,7 @@ a{
   width: 90vw;
   padding: 5px;
   margin: 5px;
-  /* border: 1px solid black; */
+  /* border: 1px solid blue; */
 }
 .main-item{
   display: flex;
@@ -121,8 +204,7 @@ a{
   margin: 5px;
   display: flex;
   flex-direction: row;
-  /* border: 1px solid black; */
-  
+  /* border: 1px solid black;  */
 }
 
 .slide-item{
@@ -143,8 +225,9 @@ a{
 .cards-item{
   display: flex;
   flex-direction: column;
-  padding: 5px;
-  width: 22.3vw;
+  margin: 5px;
+  width: 21.68vw;
+  border: 1px solid black;
 }
 
 .cards-item>p{
@@ -155,11 +238,28 @@ a{
 /***Contact***/
 
 .contact-container{
-  display: flex;
-  justify-content:flex-start; 
-  /* background-image:url("../images/login_background_desktop.jpg");
+  width: 90vw;
+  height: 85vh;
+  padding: 5px;
+  /* border: 1px solid blue; */
+  background-image:url("../images/login_background_desktop.jpg");
   background-repeat:no-repeat;
-  background-size:cover; */
+  background-size:cover;
+  display: flex;
+  justify-content:flex-end;
+  /* opacity: 0.5 */
+}
+
+.contact-container background-image::after{
+  opacity: 0.5;
+}
+
+.contact-item{
+  display: flex;
+  align-items: center;
+  width: 600px;
+  /* border: 2px solid blue ; */
+  /* color: red; */
 }
 
 
@@ -212,7 +312,7 @@ a{
 } */
 
 
-@media(max-width:420px)
+/* @media(max-width:420px)
 {
   .form-item label{
     display: none;
@@ -258,4 +358,17 @@ a{
     background-color : #612413;
     opacity: 0.7;
   }
+} */
+
+
+/* #snackbar{
+  visibility: hidden;
 }
+
+#snackbar.show{
+  visibility: visible;
+} */
+
+
+
+

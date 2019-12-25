@@ -22,50 +22,54 @@
                 <a href="../html/main.html"><img src="../images/SK Bakes logo.png"
                         alt="logo" width="150px" height="80px"></a>
             </header>
-        <main class="contact-container">
+        <div class="contact-container">
+             <div class="contact-item">
                 
-            <form id="front-form" action="#" method="post">
+                <form id="front-form" action="../html/comment-insert.php" method="post">
                 
-                <div class="form-item">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Name">
-                </div>
-                <div class="form-item">
-                    <label for="cellnum">Mobile No</label>
-                    <input type="tel" id="cellnum" name="mobile"
-                        placeholder="Mobile No">
-                </div>
-                <div class="form-item">
-                    <label for="email">Email Id</label>
-                    <input type="email" name="email" id="email"
-                        placeholder="Email Id">
-                </div>
-                <div class="form-item">
-                    <label for="state">State</label>
-                    <select name="state" id="state">
-                        <optgroup label="State">
-                            <option disabled selected>-- Select State --</option>
-                            <option value="tamilnadu">Tamil nadu</option>
-                            <option value="kerala">Kerala</option>
-                            <option value="andra">Andra pradesh</option>
-                            <option value="karnataka">Karnataka</option>
-                            <option value="maharastra">Maharastra</option>
-                            <option value="telungana">Telungana</option>
-                        </optgroup>
-                    </select>
-                </div>
-                <div class="form-item">
-                    <label for="city">City</label>
-                    <input type="text" id="city" list="cities"
-                        placeholder="City">
-                </div>
-                <div class="form-item">
-                    <label for="comment">Comment</label>
-                    <textarea name="comment" id="comment" cols="23" rows="3"
-                        placeholder="Comment"></textarea>
-                </div>
-                <button id="front-btn" type="submit">Submit</button>
-            </form>
+                    <div class="form-item">
+                        <label for="name">Username</label> 
+                        <input type="text" id="uname-contact" name="uname" readonly>
+                    </div>
+                    <div class="form-item">
+                        <label for="email">Email Id</label>
+                        <input type="email" name="email" id="email"
+                            placeholder="Email Id">
+                    </div>
+                    <div class="form-item">
+                        <label for="cellnum">Mobile No</label>
+                        <input type="tel" id="mobile" name="mobile"
+                            placeholder="Mobile No">
+                    </div>
+                    <div class="form-item">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" list="cities"
+                            placeholder="City">
+                    </div>
+                    <div class="form-item">
+                        <label for="state">State</label>
+                        <select name="state" id="state" name="state">
+                            <optgroup label="State">
+                                <option disabled selected>----- Select State -----</option>
+                                <option value="tamilnadu">Tamil nadu</option>
+                                <option value="kerala">Kerala</option>
+                                <option value="andra">Andra pradesh</option>
+                                <option value="karnataka">Karnataka</option>
+                                <option value="maharastra">Maharastra</option>
+                                <option value="telungana">Telungana</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    
+                    <div class="form-item">
+                        <label for="comment">Comment</label>
+                        <textarea name="comment" id="comment" cols="27" rows="2"
+                            placeholder="Comment"></textarea>
+                    </div>
+                    <button class="front-btn" type="submit">Submit</button>
+                </form>
+             </div>   
+            </div>
             <datalist id="cities">
                 <option value="Tirupur"></option>
                 <option value="Coimbatore"></option>
@@ -73,12 +77,17 @@
                 <option value="Madurai"></option>
                 <option value="Chennai"></option>
             </datalist>
-        </main>
+        
         <footer class="footer-container" style="  position: absolute;
         bottom: 0;">
                 <h3>Contact&nbsp;:&nbsp;</h3>
                 <p>Mobile : 984xxxx123 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email :
                     selvxxx@gmail.com</p>
+                    
             </footer>
+
+            <script>
+                document.getElementById("uname-contact").value = sessionStorage.getItem('uname');
+            </script>
     </body>
 </html>

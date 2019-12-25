@@ -4,40 +4,58 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Main Page</title>
-        <link rel = "icon" type = "image/png" href = "../images/sk-logo.png">
+        <link rel="icon" type="image/png" href="../images/sk-logo.png">
         <!-- For apple devices -->
-        <link rel = "apple-touch-icon" type = "image/png" href = "../images/sk-logo.png"/>  
+        <link rel="apple-touch-icon" type="image/png"
+            href="../images/sk-logo.png">
         <link rel="stylesheet" href="../css/main.css">
         <script src="../js/js.js"></script>
-        <link href='https://fonts.googleapis.com/css?family=Baumans' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Baumans'
+            rel='stylesheet'>
     </head>
     <body class="container">
         <header class="head-container">
-            <img src="../images/SK Bakes logo.png" alt="logo" width="180px" height="130px">
+            <img src="../images/SK Bakes logo.png" alt="logo" width="180px"
+                height="130px">
             <!-- <h1 style="margin-left: 2rem">Sk Bakes</h1> -->
         </header>
         <nav class="nav-container">
-            <div class="nav-item" style="list-style-type: none">
-                <h3><a class="home" href="../index.html">HOME</a></h3>
+            <div class="nav-item">
+                <h3><a class="home" href="../html/main.html">HOME</a></h3>
                 <h3><a class="product" href="product.html">PRODUCTS</a></h3>
                 <h3><a class="contact" href="contact-us.html">CONTACT US</a></h3>
             </div>
-            <p>Welcome <b><output style="text-transform: uppercase"
-                        id="uname-main"></output></b> </p>
+            <div class="nav-item">
+                <h3 style="margin: auto 0;">Welcome</h3>
+                <ul>
+                    <li>
+                        <a><b><output style="text-transform:
+                                    uppercase ;
+                                    color: red;"
+                                    id="uname-main"></output></b></a>
+                        <ul class="signout">
+                            <li><a href="main.html">Home</a></li>
+                            <li><a href="product.html">Product</a></li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                            <li><a href="../index.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        <main class="main-container"> 
+        <main class="main-container">
             <p class="main-item">
-                <img src="../images/SK Bakes logo.png" alt="SK Bakes logo" width="6000px" height="445px">
-            </p>  
+                <img src="../images/SK Bakes logo.png" alt="SK Bakes logo"
+                    width="6000px" height="445px">
+            </p>
         </main>
         <footer class="footer-container">
             <h3>Contact&nbsp;:&nbsp;</h3>
             <p>Mobile : 984xxxx123 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email :
                 selvxxx@gmail.com</p>
         </footer>
-        <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d28a56e5517879c"></script> -->
         <script>
-                    document.getElementById("uname-main").innerHTML = sessionStorage.getItem("uname");
-            </script>
+            document.getElementById("uname-main").innerHTML = sessionStorage.getItem("uname");
+        </script>
     </body>
 </html>
