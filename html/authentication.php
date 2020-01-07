@@ -1,4 +1,3 @@
-<script type="text/javascript" src="http://127.0.0.1/SK-Bakes/js/js.js"></script>
 <?php
         include('dbconfig.php');   
 
@@ -12,7 +11,7 @@
             $name = mysqli_real_escape_string($conn, $username);  
             $password = mysqli_real_escape_string($conn, $password);  
 
-            $sql = 'SELECT userName, pass FROM logindata WHERE userName = "'.$name.'" AND pass = "'.$password.'"';
+            $sql = 'SELECT userName, AES_DECRYPT(pass,\'secret\') as pass FROM logindata WHERE userName = "'.$name.'" AND AES_DECRYPT(pass,\'secret\') = "'.$password.'"';
 
             $result=mysqli_query($conn, $sql); 
             
@@ -31,11 +30,7 @@
             }
             else
             {
-                // echo '<script type="text/javascript">',
-                // 'ftest();',
-                // '</script>';
-                header("location: ../index.html");
-
+                header("location: ../../index.html");
             }
             
         }

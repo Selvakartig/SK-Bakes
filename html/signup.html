@@ -4,40 +4,60 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sign up</title>
-        <link rel = "icon" type = "image/png" href = "../images/sk-logo.png">
+        <link rel="icon" type="image/png" href="../images/sk-logo.png">
         <!-- For apple devices -->
-        <link rel = "apple-touch-icon" type = "image/png" href = "../images/sk-logo.png"/>  
+        <link rel="apple-touch-icon" type="image/png"
+            href="../images/sk-logo.png"
+            />
         <link rel="stylesheet" href="../css/main.css">
         <script src="../js/js.js"></script>
     </head>
     <body>
-            <div class="front-container">
-                    <div class="front-item">
-        <form id="front-form" action="../html/insert.php" method="post" onsubmit="return checkLength()" >
-            <div class="form-item">
-                    <label for="fname">Firstname</label>
-                     <input type="text" name="fname" id="fname">
+
+        <div class="front-container">
+            <div class="index-item">
+                <div class="index-btn">
+                    <a href="../html/login.html"><p>Login</p></a>
+                </div>
             </div>
-            <div class="form-item">
-                    <label for="lname">Lastname</label>
-                    <input type="text" name="lname" id="lname">
+            <div class="front-item">
+                <form id="front-form" action="../html/insert.php" method="post"
+                    onsubmit="return checkLength()">
+                    <div class="form-item">
+                        <label for="fname">Firstname</label>
+                        <input type="text" name="fname" id="fname"
+                            placeholder="Firstname">
+                    </div>
+                    <div class="form-item">
+                        <label for="lname">Lastname</label>
+                        <input type="text" name="lname" id="lname"
+                            placeholder="Lastname">
+                    </div>
+                    <div class="form-item">
+                        <label for="mail">Email id</label>
+                        <input type="mail" name="mail" id="mail"
+                            placeholder="Email Id">
+                    </div>
+                    <div class="form-item">
+                        <label for="uname">Username</label>
+                        <input type="text" name="uname" id="uname"
+                            placeholder="Username">
+                    </div>
+                    <div class="form-item">
+                        <label for="pass1">Password</label>
+                        <input type="password" name="pass1" id="pass1"
+                            placeholder="Password">
+                    </div>
+                    <div class="form-item">
+                        <label for="pass2">Password</label>
+                        <input type="password" name="pass2" id="pass2"
+                            placeholder="Re-type Password">
+                    </div>
+
+                    <button class="front-btn" type="submit">Register</button>
+                </form>
+
             </div>
-            <div class="form-item">
-                    <label for="uname">Username</label>
-                    <input type="text" name="uname" id="uname">
-            </div>
-            <div class="form-item">
-                    <label for="pass1">Password</label>
-                    <input type="password" name="pass1" id="pass1">
-            </div>
-            <div class="form-item">
-                    <label for="pass2">Password</label>
-                    <input type="password" name="pass2" id="pass2" placeholder="Re-type Password">
-            </div>
-            
-            <button class="front-btn" type="submit">Register</button>
-        </form>
-    </div>
-</div>
-        </body>
-    </html>
+        </div>
+    </body>
+</html>

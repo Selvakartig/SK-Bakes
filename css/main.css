@@ -7,6 +7,14 @@
   box-sizing: border-box;
 }
 
+@font-face{
+  src: url(../fonts/Baumans-Regular.ttf);
+  font-family: 'Baumans';
+}
+
+h1,p{
+  font-family: 'Baumans';
+}
 /***Index page***/
 
 .index-container{
@@ -49,19 +57,19 @@
   background-repeat:no-repeat;
   background-size:cover;
   /* flex-direction: column; */
-  /* border: 3px solid red; */
-  align-items: center;
+  /* border: 2px solid red; */
+  align-items: center;  
   flex-direction: column;
 }
 
 .front-item{
   /* border: 3px solid blue; */
   /* height: 30vh; */
-  width: 62vw;
+  width: 65vw;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  /* flex-direction: column; */
+  align-items: flex-end;
+  /* justify-content: flex-end; */
+  flex-direction: column;
 }
 form#front-form{
   padding: 1rem; 
@@ -80,10 +88,11 @@ form#front-form{
   display: flex;
   flex-basis: 8rem;
 }
-button.front-btn{
+.front-btn{
   width: 4rem;
   color: black;
   margin: 0 auto;
+  border: 1px solid red;
   }
 
 /***Main***/
@@ -111,47 +120,56 @@ button.front-btn{
   justify-content: space-between;
   /* flex-direction: row; */
   /* border: 1px solid black; */
+  position: sticky;
+  top: 0;
+  background-color: gainsboro;
+  border-radius: 15px;
 }
 .nav-item{
   /* border: 1px solid black; */
-  font-family: Baumans;
+  font-family: 'Baumans';
+  display: flex;
+  justify-content: space-between;
+  width: 550px;
+}
+.nav-item1{
+  /* border: 1px solid black; */
+  font-family: 'Baumans';
   display: flex;
 }
 .home:hover ,.product:hover,.contact:hover{
   background-color: skyblue;
+  border-radius: 15px;
 }
 #uname-main{
   margin-right: 10px;
 }
-.home{
-  border-radius: 15px;
-  padding: 7px;
-}
-.product, .contact{
-  /* border: 1px solid black; */
-  border-radius: 15px;
-  padding: 7px;
-  margin-left: 5rem;
-}
 
-.nav-item ul li{
+.home,.product, .contact{
+  /* border: 1px solid black; */
+  padding: 5px;
+  /* border-radius: 15px; */
+  /* justify-content: space-evenly; */
+ } 
+
+.nav-item1 ul li{
   display: inline-block;
   position: relative;
   text-align: center;
 }
-.nav-item ul li a{
+.nav-item1 ul li a{
   display: block;
   padding: 5px 15px;
   /* color: #333;
   text-decoration: none; */
 }
 
-.nav-item ul li ul a:hover{
+.nav-item1 ul li ul a:hover{
   color: #fff;
   background: #939393;
 }
 
-.nav-item ul li ul.signout{
+.nav-item1 ul li ul.signout{
   /* width: 50px; */
   background: #f2f2f2;
   display: none;
@@ -160,38 +178,44 @@ button.front-btn{
   /* right: 0; 
   left :0; */
 }
-.nav-item ul li:hover ul.signout{
+.nav-item1 ul li:hover ul.signout{
   display: block;	/* Display the dropdown */
 }
-.nav-item ul li ul.signout li{
+.nav-item1 ul li ul.signout li{
   display: block;
 }
 a,ul{
   text-decoration: none;
   list-style: none;
   color: #612413;
-  font-family: Baumans;
+  font-family: 'Baumans';
 } 
 .main-container{
   width: 90vw;
   padding: 5px;
   margin: 5px;
   /* border: 1px solid blue; */
+  
 }
 .main-item{
   display: flex;
   justify-content: center;
-  opacity: 0.4; 
+  /* opacity: 0.4;  */
+  background-image:url("../images/login_background_desktop.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 .footer-container{
   width: 90vw;
   padding: 5px;
-  margin: 5px;
+  /* margin: 5px; */
   display: flex;
   justify-content:center;
   flex-direction: column;
-  font-family: Baumans;
+  font-family: 'Baumans';
   color: #612413;
+  background-color: gainsboro;
+  /* border-radius: 15px; */
   /* border: 1px solid black; */
 
 }
@@ -205,6 +229,9 @@ a,ul{
   display: flex;
   flex-direction: row;
   /* border: 1px solid black;  */
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 .slide-item{
@@ -220,14 +247,16 @@ a,ul{
   flex-flow: row wrap;
   /* padding: 10px 5px 0px 0px; */
   background-color: bisque;
+  justify-content: center;
 }
 
 .cards-item{
   display: flex;
   flex-direction: column;
   margin: 5px;
-  width: 21.68vw;
-  border: 1px solid black;
+  width: 20vw;
+  flex-grow: 1;
+  border: 1px solid brown;
 }
 
 .cards-item>p{
@@ -247,17 +276,12 @@ a,ul{
   background-size:cover;
   display: flex;
   justify-content:flex-end;
-  /* opacity: 0.5 */
-}
-
-.contact-container background-image::after{
-  opacity: 0.5;
 }
 
 .contact-item{
   display: flex;
   align-items: center;
-  width: 600px;
+  width: 570px;
   /* border: 2px solid blue ; */
   /* color: red; */
 }
@@ -273,47 +297,47 @@ a,ul{
   color: inherit;
   border-radius: 25px;
   outline:none;
+  font-family: 'Baumans';
 }
 
 /******************
     Media Query
 *******************/
-/*  
-@media (min-width:500px){
-  .form-item label{
-    display: block;
-    color: inherit;
+
+@media(max-width:420px)
+{
+    .index-container{
+    height: 92.5vh;
+    background-image:url("../images/login_background_mobile.jpg");
+    background-size: auto;
+    justify-content: center;
+    /* border: 3px solid red; */
   }
 
-  .form-box select{
+  .index-item{
+    width: 60vw;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border: 3px solid blue; */
   }
+  
+  .index-btn{
+    border-radius: 25px;
+    /*padding: 5px;*/
+    margin-top: 1rem;
+    margin-left: 30vw;
+    /* border: 1px solid black; */
+  }
+    
+.front-container{
+  height: 92.5vh;
+  background-image:url("../images/login_background_mobile.jpg");
+   /*border: 3px solid red; */
+  align-items: center;
+  flex-direction: column;
 }
 
-@media (min-width:600px){
-  .form-box{
-    flex-direction: row;
-  }
-
-  .form-box label{
-    flex-basis: 6rem;
-    color: inherit;
-  }
-
-  .form-box .btn1{
-    margin-left: 6rem;
-  }
-
-  .form-box select {
-    display: flex;
-    flex-basis: 10rem; 
-  }
-
-} */
-
-
-/* @media(max-width:420px)
-{
   .form-item label{
     display: none;
   }
@@ -325,6 +349,7 @@ a,ul{
     justify-content: space-between;
     flex-wrap: nowrap; 
     font-size: 10pt;
+
   }
   .nav-item{
     color: blue;
@@ -332,11 +357,14 @@ a,ul{
     flex-wrap: wrap; 
     flex-direction: column;
     align-items: center;
+    /* margin-bottom: 5px; */
+    /* border: 1px solid black; */
+    line-height: 30px;
   }
   .home,.product,.contact{
-    border: 0.5px solid black;
-    border-radius: 0px;
-    padding: 0px;
+    /* border: 0.5px solid black; */
+    border-radius: 5px;
+    padding: 3px;
     background-color: aquamarine;
     margin-left: 0px;    
   }
@@ -357,17 +385,10 @@ a,ul{
   form#front-form{
     background-color : #612413;
     opacity: 0.7;
+    border-radius: 15px;
   }
-} */
+} 
 
-
-/* #snackbar{
-  visibility: hidden;
-}
-
-#snackbar.show{
-  visibility: visible;
-} */
 
 
 
