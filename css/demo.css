@@ -1,0 +1,440 @@
+/*****************
+      Default 
+******************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @font-face{
+    src: url(../fonts/Baumans-Regular.ttf);
+    font-family: 'Baumans';
+  }
+  
+  h1,p,a,ul
+  {
+    font-family: 'Baumans';
+  }
+  
+  .msg{
+    background-color: skyblue; 
+    border-radius: 15px; 
+    padding : 3px ;
+    position: absolute;
+  }
+  
+  /***Index page***/
+  
+  .index-container{
+    height: 100vh;
+    display: flex;
+    justify-content:flex-start; 
+    background-image:url("../images/login_background_desktop.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    /* border: 3px solid red; */
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .index-item{
+    /* border: 3px solid blue; */
+    width: 80vw;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .index-btn{
+    margin-right: 1rem;
+    /* border: 1px solid black; */
+    background-color: burlywood;
+    border-radius: 25px;
+    padding: 5px;
+  }
+  
+  /***Login***/
+  
+  .front-container{
+    height: 100vh;
+    display: flex;
+    /*justify-content:center; */
+    background-image:url("../images/login_background_desktop.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    /* border: 2px solid red; */
+    align-items: center;  
+    flex-direction: column;
+  }
+  
+  .front-item{
+    /* border: 1px solid blue; */
+    width: 59vw;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin : auto 0;
+  }
+  #front-form{
+    padding: 1rem; 
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+  }
+  .form-item{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0.5rem;
+  }
+  .form-item>label{
+    color: cornsilk;
+    font-size: 1.5rem;
+    display: flex;
+    flex-basis: 8rem;
+  }
+  .front-btn{
+    width: 4rem;
+    color: black;
+    margin: 0 auto;
+    border: 1px solid red;
+    }
+  
+  /***Main***/
+  
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid red; */
+  }
+  .head-container{
+    width: 90vw;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+    
+  }
+  .nav-container{
+    width: 90vw;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    position: sticky;
+    top: 0;
+    background-color: gainsboro;
+    border-radius: 15px;
+  }
+  .nav-item{
+    /* border: 1px solid black; */
+    font-family: 'Baumans';
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+  }
+  .nav-item1{
+    /* border: 1px solid black; */
+    font-family: 'Baumans';
+    display: flex;
+  }
+  .home:hover ,.product:hover,.contact:hover{
+    background-color: skyblue;
+    border-radius: 15px;
+  }
+  #uname-main{
+    margin-right: 10px;
+  }
+  
+  .home,.product, .contact{
+    /* border: 1px solid black; */
+    padding: 5px;
+   } 
+  
+  .nav-item1 ul li{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+  }
+  .nav-item1 ul li a{
+    display: block;
+    padding: 5px 15px;
+  }
+  
+  .nav-item1 ul li ul a:hover{
+    color: #fff;
+    background: #939393;
+  }
+  
+  .nav-item1 ul li ul.signout{
+    background: #f2f2f2;
+    display: none;
+    position: absolute;
+    z-index: 999;
+  }
+  .nav-item1 ul li:hover ul.signout{
+    display: block;	/* Display the dropdown */
+  }
+  .nav-item1 ul li ul.signout li{
+    display: block;
+  }
+  a,ul{
+    text-decoration: none;
+    list-style: none;
+    color: #612413;
+  } 
+  .main-container{
+    width: 90vw;
+    margin: 5px;
+    /* border: 1px solid blue;  */
+  }
+  .main-item{
+    height: 800px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    background-image:url("../images/SK_Bakes_logo.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    /* border: 1px solid red;  */
+  }
+  .footer-container{
+    width: 90vw;
+    padding: 5px;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    font-family: 'Baumans';
+    color: #612413;
+    background-color: gainsboro;
+    /* border: 1px solid black; */
+  
+  }
+  
+  /***products***/
+  
+  .pro-head-container{
+    width: 90vw;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black;  */
+    position: sticky;
+    top: 0;
+    background-color: white;
+  }
+  
+  .pro-head-container>a>img, .head-container>img{
+   width: 150px;
+   height: 80px;
+  }
+  
+  .slide-item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+  }
+  
+  .cards{
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    background-color: bisque;
+    justify-content: center;
+  }
+  
+  .cards-item{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: 20vw;
+    flex-grow: 1;
+    border: 1px solid brown;
+  }
+  
+  .cards-item>p{
+    font-size: 20px;
+    align-self: center;
+  }
+  
+  /***Contact***/
+  
+  .contact-container{
+    width: 90vw;
+    height: 76vh;
+    padding: 5px;
+    /* border: 1px solid blue; */
+    background-image:url("../images/login_background_desktop.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    display: flex; 
+    justify-content:flex-start;
+  }
+  
+  .contact-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 73vw;
+    /* border: 2px solid blue ; */
+  }
+  
+  
+  /************** 
+        Form 
+  ***************/
+  
+   input,select,option,label,button,textarea{
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    color: inherit;
+    border-radius: 25px;
+    outline:none;
+    font-family: 'Baumans';
+  }
+  
+  /******************
+      Media Query
+  *******************/
+  
+  @media(max-width:420px)
+  {
+    h1{
+      font-size: 15pt;
+    }
+  
+    .index-container{
+      height: 92.5vh;
+      background-image:url("../images/login_background_mobile.jpg");
+      background-size: auto;
+      justify-content: center;
+      /* border: 3px solid red; */
+    }
+  
+    .index-item{
+      width: 60vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /*border: 3px solid blue; */
+    }
+    
+    .index-btn{
+      border-radius: 25px;
+      /*padding: 5px;*/
+      margin-top: 1rem;
+      margin-left: 30vw;
+      /* border: 1px solid black; */
+    }
+      
+  .front-container{
+    height: 92.5vh;
+    background-image:url("../images/login_background_mobile.jpg");
+     /*border: 3px solid red; */
+    align-items: center;
+    flex-direction: column;
+  }
+  
+    .form-item label{
+      display: none;
+    }
+    #uname-main{
+      margin-right: 5px;
+    }
+    .nav-container{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap; 
+      font-size: 7pt;
+      /* border: 0.5px solid red; */
+    }
+    .nav-item{
+      color: blue;
+      display: flex;
+      flex-wrap: wrap; 
+      flex-direction: row;
+      align-items: center;
+      /* margin-bottom: 5px; */
+      /* border: 0.5px solid blue; */
+      /* line-height: 30px; */
+      justify-content: space-around;
+    }
+  
+    .nav-item1 ul li a{
+      display: block;
+      padding: 4px 10px;
+    }
+  
+    .home,.product,.contact{
+      /* border: 0.5px solid black; */
+      border-radius: 5px;
+      padding: 3px;
+      background-color: aquamarine;
+      margin-left: 0px;    
+    }
+    .front-container{
+      display: flex;
+      justify-content:center; 
+      background-image:url("../images/login_background_mobile.jpg");
+      background-repeat:no-repeat;
+      background-size:cover;
+    }
+    .front-item{
+      height: 93vh;
+      width: 81vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    form#front-form{
+      background-color : #612413;
+      opacity: 0.7;
+      border-radius: 15px;
+    }
+  
+    .main-item{
+      height: 80vh;
+      width: auto;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      background-image:url("../images/SK_Bakes_logo_mobile.jpg");
+      background-repeat:no-repeat;
+      background-size:auto;
+      /* border: 1px solid red;  */
+    }
+  
+    .pro-head-container{
+      width: 90vw;
+      margin: 5px;
+      display: flex;
+      flex-direction: row;
+      /* border: 1px solid black;  */
+      position: sticky;
+      top: 0;
+      background-color: white;
+    }
+  
+    .pro-head-container>a>img, .head-container>img{
+      width: 80px;
+      height: 50px;
+     }
+  
+     .footer-container{
+      /* border: 1px solid black; */
+      font-size: 10pt;
+    }
+  
+  } 
+  
+  
+  
+  
+  
+  

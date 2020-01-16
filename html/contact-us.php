@@ -1,3 +1,35 @@
+
+<?php
+ini_set('display_errors', 1);
+include('dbconfig.php');
+$op1 = "";
+if ($_POST) 
+{
+    $username = $_POST['uname'];
+    $mobile = $_POST['mobile'];
+    $city = $_POST['city'];
+    $state = $_POST['state'];
+    $comments = $_POST['comment'];
+    
+
+    $sql = 'INSERT INTO comment (userName, mobile, city, states, comment) VALUES ( "' . $username . '","' . $mobile . '","' . $city . '","' . $state . '","' . $comments . '")';
+
+    if (mysqli_query($conn, $sql)) 
+    {
+        $op1 = '<div class="msg" >
+                Your request has been submitted!! <br>
+                We will get back to you soon.
+              </div>';
+        // header("location: ../html/contact-us.html");
+        // echo 'inserted comments';
+    } 
+    else 
+    {
+        echo "Not inserted : " . mysqli_error($sql);
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,16 +48,18 @@
     </head>
     <body class="container">
         <header class="pro-head-container">
-                <a href="../html/main.html"><img src="../images/SK Bakes logo.png"
+                <a href="../html/main.html"><img src="../images/SK_Bakes_logo.png"
                         alt="logo" width="150px" height="80px"></a>
                 <h1 style="margin: auto auto;">Contact Us</h1>
-                <a href="../html/main.html"><img src="../images/SK Bakes logo.png"
+                <a href="../html/main.html"><img src="../images/SK_Bakes_logo.png"
                         alt="logo" width="150px" height="80px"></a>
             </header>
         <div class="contact-container">
              <div class="contact-item">
-                
-                <form id="front-form" action="../html/comment-insert.php" method="post">
+             <div class="popup">
+                <p><?= $op1; ?></p>
+            </div>
+                <form id="front-form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
                 
                     <div class="form-item">
                         <label for="name">Username</label> 
@@ -73,8 +107,7 @@
                 <option value="Chennai"></option>
             </datalist>
         
-        <footer class="footer-container" style="  position: absolute;
-        bottom: 0;">
+        <footer class="footer-container" >
                 <h3>Contact&nbsp;:&nbsp;</h3>
                 <p>Mobile : 984xxxx123 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email :
                     selvxxx@gmail.com</p>
